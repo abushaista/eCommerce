@@ -13,6 +13,17 @@ return new class extends Migration
     {
         Schema::create('addresses', function (Blueprint $table) {
             $table->id();
+            $table->string('address_label');
+            $table->string('address_detail');
+            $table->string('optional_notes')->nullable();
+            $table->string('receipient_name');
+            $table->string('mobile_no');
+            $table->string('province');
+            $table->string('city');
+            $table->string('district');
+            $table->string('sub_district');
+            $table->string('postal_code');
+            $table->json('pin_point');
             $table->timestamps();
         });
     }
